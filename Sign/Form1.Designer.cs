@@ -34,14 +34,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column_UID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_JS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -64,8 +62,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.Column_UID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_JS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -124,24 +124,6 @@
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(428, 382);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // Column_UID
-            // 
-            this.Column_UID.Frozen = true;
-            this.Column_UID.HeaderText = "UID";
-            this.Column_UID.Name = "Column_UID";
-            this.Column_UID.ReadOnly = true;
-            // 
-            // Column_JS
-            // 
-            this.Column_JS.HeaderText = "JWSession";
-            this.Column_JS.Name = "Column_JS";
-            this.Column_JS.Width = 200;
-            // 
-            // Column_Name
-            // 
-            this.Column_Name.HeaderText = "NAME";
-            this.Column_Name.Name = "Column_Name";
             // 
             // groupBox2
             // 
@@ -214,6 +196,16 @@
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "数据区";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(28, 359);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(244, 23);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "保存数据";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // textBox11
             // 
@@ -391,19 +383,27 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "经度";
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(28, 359);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(244, 23);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "保存数据";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // Column_UID
+            // 
+            this.Column_UID.Frozen = true;
+            this.Column_UID.HeaderText = "UID";
+            this.Column_UID.Name = "Column_UID";
+            this.Column_UID.ReadOnly = true;
+            // 
+            // Column_JS
+            // 
+            this.Column_JS.HeaderText = "USR";
+            this.Column_JS.Name = "Column_JS";
+            this.Column_JS.Width = 200;
+            // 
+            // Column_Name
+            // 
+            this.Column_Name.HeaderText = "PWD";
+            this.Column_Name.Name = "Column_Name";
             // 
             // Form1
             // 
@@ -437,9 +437,6 @@
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column_UID;
-        private DataGridViewTextBoxColumn Column_JS;
-        private DataGridViewTextBoxColumn Column_Name;
         private RichTextBox richTextBox1;
         private GroupBox groupBox3;
         private Button button4;
@@ -468,5 +465,8 @@
         private Label label2;
         private Button button5;
         private System.Windows.Forms.Timer timer1;
+        private DataGridViewTextBoxColumn Column_UID;
+        private DataGridViewTextBoxColumn Column_JS;
+        private DataGridViewTextBoxColumn Column_Name;
     }
 }

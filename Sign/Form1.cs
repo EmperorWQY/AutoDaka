@@ -27,6 +27,7 @@ namespace Sign
             setValue();
             timer1.Enabled = true;
             timer1.Interval = 10;
+            timer1.Stop();
 
             refreshUserData();
         }
