@@ -1,0 +1,64 @@
+﻿
+
+<div class="container-fluid p-5 bg-light text-black text-center">
+	<div class="row">
+		<div class="col-sm-4">
+			<p></p>
+		</div>
+		<div class="col-sm-4">
+			<h1>自动打卡系统</h1>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<p>
+
+	</p>
+	<div class="wrap">
+		<div class="card">
+			<div class="card-header">
+				<h3>信息录入</h3>
+			</div>
+			<div class="card-body">
+				<form action="@Url.Action("AddInfo","Info")" method="post">
+					<div class="form-floating">
+						<input type="tel" class="form-control" id="mid" name="Usr" placeholder="您的用户名(一般是手机号)">
+						<label for="mid">手机号</label>
+					</div>
+					<p>
+
+					</p>
+					<div class="form-floating">
+						<input type="password" class="form-control" id="pwd" name="Pwd" placeholder="您的密码">
+						<label for="pwd">密码</label>
+					</div>
+					<p>
+
+					</p>
+					<input type="submit" class="btn btn-primary">
+					@ViewData["error"]
+				</form>
+			</div>
+		</div>
+		<div class="text-center">
+			<p>项目链接<a href="https://github.com/EmperorWQY/AutoDaka">https://github.com/EmperorWQY/AutoDaka</a></p>
+		</div>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+	function showalert(text) {
+		alert(text);
+	}
+</script>
+
+<style>
+	.wrap {
+		position: relative;
+		left: 35%;
+		top: 30%;
+		width: 30%;
+		float: left;
+	}
+</style>
